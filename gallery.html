@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!--
+    gallery.html — Photo Gallery Page
+    Web Technology 1 Project | 1447H
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | HABOOB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="navbar-brand">
+                <img src="images/logo.jpg" alt="Haboob Logo" />
+                <span>HABOOB</span>
+            </a>
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="compare.html">Compare</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn-nav">Book Now</a></li>
+            </ul>
+            <button class="navbar-toggle" id="navToggle" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+        <div class="navbar-mobile" id="navMobile">
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="compare.html">Compare</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="booking.html" class="btn-primary">Book Now</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <div class="container">
+                <p class="section-tag">A Visual Journey</p>
+                <h1 class="section-title">Discover Saudi Arabia's Hidden Beauty</h1>
+                <p class="section-desc">
+                    From misty valleys to snow-capped peaks —
+                    a glimpse of the landscapes waiting for you.
+                    Click any image to view it full size.
+                </p>
+            </div>
+        </section>
+
+        <!-- PHOTO GRID -->
+        <section style="padding:70px 0 90px; background-color:var(--color-white);">
+            <div class="container">
+                <!--
+                    Gallery grid: uses CSS Grid.
+                    Cards with class "wide" span 2 columns.
+                    data-* attributes are read by JavaScript to populate the lightbox.
+                -->
+                <div class="gallery-grid">
+
+                    <!-- Photo 1: Abha Valley (wide) -->
+                    <div class="gallery-card wide"
+                         data-name="Misty Abha Valley"
+                         data-region="Aseer Region"
+                         data-gradient="linear-gradient(135deg,#4A7C59,#2c4a35)"
+                         data-icon="🌧">
+                        <div class="gallery-card-inner"
+                             style="background:linear-gradient(135deg,#4A7C59,#2c4a35);">
+                            🌧
+                            <div class="gallery-card-overlay">
+                                <div class="gallery-card-info">
+                                    <p>Misty Abha Valley</p>
+                                    <small>Aseer Region · Rainy Realm</small>
+                                </div>
+                            </div>
+                            <span class="gallery-card-zoom">🔍</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 2: Jabal Al-Lawz -->
+                    <div class="gallery-card"
+                         data-name="Jabal Al-Lawz Summit"
+                         data-region="Tabuk Region"
+                         data-gradient="linear-gradient(135deg,#8ba6a9,#4a5c66)"
+                         data-icon="❄️">
+                        <div class="gallery-card-inner"
+                             style="background:linear-gradient(135deg,#8ba6a9,#4a5c66);">
+                            ❄️
+                            <div class="gallery-card-overlay">
+                                <div class="gallery-card-info">
+                                    <p>Jabal Al-Lawz Summit</p>
+                                    <small>Tabuk Region · Snowy Peak</small>
+                                </div>
+                            </div>
+                            <span class="gallery-card-zoom">🔍</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 3: Al-Baha forests -->
+                    <div class="gallery-card"
+                         data-name="Al-Baha Mountain Forests"
+                         data-region="Al-Baha Region"
+                         data-gradient="linear-gradient(135deg,#c9a66b,#8a724a)"
+                         data-icon="🌿">
+                        <div class="gallery-card-inner"
+                             style="background:linear-gradient(135deg,#c9a66b,#8a724a);">
+                            🌿
+                            <div class="gallery-card-overlay">
+                                <div class="gallery-card-info">
+                                    <p>Al-Baha Mountain Forests</p>
+                                    <small>Al-Baha Region · Fresh Breeze</small>
+                                </div>
+                            </div>
+                            <span class="gallery-card-zoom">🔍</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 4: Turaif snow -->
+                    <div class="gallery-card"
+                         data-name="Turaif Snow Fields"
+                         data-region="Northern Borders"
+                         data-gradient="linear-gradient(135deg,#7a96a0,#3c5060)"
+                         data-icon="🏔">
+                        <div class="gallery-card-inner"
+                             style="background:linear-gradient(135deg,#7a96a0,#3c5060);">
+                            🏔
+                            <div class="gallery-card-overlay">
+                                <div class="gallery-card-info">
+                                    <p>Turaif Snow Fields</p>
+                                    <small>Northern Borders · Snowy Peak</small>
+                                </div>
+                            </div>
+                            <span class="gallery-card-zoom">🔍</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 5: Al-Ahsa rain -->
+                    <div class="gallery-card"
+                         data-name="Al-Ahsa Oasis Rain"
+                         data-region="Eastern Province"
+                         data-gradient="linear-gradient(135deg,#5a9470,#3a6a48)"
+                         data-icon="🌿">
+                        <div class="gallery-card-inner"
+                             style="background:linear-gradient(135deg,#5a9470,#3a6a48);">
+                            🌿
+                            <div class="gallery-card-overlay">
+                                <div class="gallery-card-info">
+                                    <p>Al-Ahsa Oasis Rain</p>
+                                    <small>Eastern Province · Rainy Realm</small>
+                                </div>
+                            </div>
+                            <span class="gallery-card-zoom">🔍</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 6: Taif rose gardens (wide) -->
+                    <div class="gallery-card wide"
+                         data-name="Taif Rose Gardens"
+                         data-region="Makkah Region"
+                         data-gradient="linear-gradient(135deg,#d4aa70,#9a7a50)"
+                         data-icon="🌹">
+                        <div class="gallery-card-inner"
+                             style="background:linear-gradient(135deg,#d4aa70,#9a7a50);">
+                            🌹
+                            <div class="gallery-card-overlay">
+                                <div class="gallery-card-info">
+                                    <p>Taif Rose Gardens</p>
+                                    <small>Makkah Region · Fresh Breeze</small>
+                                </div>
+                            </div>
+                            <span class="gallery-card-zoom">🔍</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 7: Abha waterfalls -->
+                    <div class="gallery-card"
+                         data-name="Abha Seasonal Waterfalls"
+                         data-region="Aseer Region"
+                         data-gradient="linear-gradient(135deg,#3a7050,#1e3d2a)"
+                         data-icon="💧">
+                        <div class="gallery-card-inner"
+                             style="background:linear-gradient(135deg,#3a7050,#1e3d2a);">
+                            💧
+                            <div class="gallery-card-overlay">
+                                <div class="gallery-card-info">
+                                    <p>Abha Seasonal Waterfalls</p>
+                                    <small>Aseer Region · Rainy Realm</small>
+                                </div>
+                            </div>
+                            <span class="gallery-card-zoom">🔍</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 8: Tabuk glamping -->
+                    <div class="gallery-card"
+                         data-name="Luxury Glamping in Tabuk"
+                         data-region="Tabuk Region"
+                         data-gradient="linear-gradient(135deg,#9ab6b9,#5a7080)"
+                         data-icon="🏕">
+                        <div class="gallery-card-inner"
+                             style="background:linear-gradient(135deg,#9ab6b9,#5a7080);">
+                            🏕
+                            <div class="gallery-card-overlay">
+                                <div class="gallery-card-info">
+                                    <p>Luxury Glamping in Tabuk</p>
+                                    <small>Tabuk Region · Snowy Peak</small>
+                                </div>
+                            </div>
+                            <span class="gallery-card-zoom">🔍</span>
+                        </div>
+                    </div>
+
+                    <!-- Photo 9: Al-Baha village -->
+                    <div class="gallery-card"
+                         data-name="Al-Baha Mountain Village"
+                         data-region="Al-Baha Region"
+                         data-gradient="linear-gradient(135deg,#b89060,#7a6040)"
+                         data-icon="🏘">
+                        <div class="gallery-card-inner"
+                             style="background:linear-gradient(135deg,#b89060,#7a6040);">
+                            🏘
+                            <div class="gallery-card-overlay">
+                                <div class="gallery-card-info">
+                                    <p>Al-Baha Mountain Village</p>
+                                    <small>Al-Baha Region · Fresh Breeze</small>
+                                </div>
+                            </div>
+                            <span class="gallery-card-zoom">🔍</span>
+                        </div>
+                    </div>
+
+                </div><!-- /gallery-grid -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- LIGHTBOX — shown when a gallery card is clicked -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer">
+        <div class="lightbox-box">
+            <!-- Enlarged image area -->
+            <div class="lightbox-img" id="lightboxImg">
+                <span class="lb-icon">🌿</span>
+            </div>
+            <!-- Image info and close button -->
+            <div class="lightbox-info">
+                <div>
+                    <h3 id="lightboxName">Destination Name</h3>
+                    <p id="lightboxSub">Region</p>
+                </div>
+                <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/logo.jpg" alt="Haboob Logo" />
+                    <p class="footer-brand-name">HABOOB | هبوب</p>
+                    <p>Discover the highlands of Saudi Arabia through our curated eco-friendly mountain experiences.</p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social">📷</a>
+                        <a href="#" class="footer-social">🐦</a>
+                        <a href="#" class="footer-social">👍</a>
+                        <a href="#" class="footer-social">▶</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="compare.html">Compare Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Realms</h4>
+                    <ul>
+                        <li><a href="destinations.html">🌧 Rainy Realms</a></li>
+                        <li><a href="destinations.html">❄️ Snowy Peaks</a></li>
+                        <li><a href="destinations.html">🌿 Fresh Breezes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact-item"><span class="footer-contact-icon">📍</span><span>Al-Baha, Saudi Arabia</span></div>
+                    <div class="footer-contact-item"><span class="footer-contact-icon">📞</span><span>+966 50 123 4567</span></div>
+                    <div class="footer-contact-item"><span class="footer-contact-icon">✉</span><span>info@haboobtravel.sa</span></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Haboob Travel. All rights reserved.</p>
+                <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

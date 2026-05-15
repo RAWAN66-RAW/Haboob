@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!--
+    index.html — Home Page
+    Haboob Travel Agency | موقع هبوب للسياحة
+    Web Technology 1 Project | 1447H
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HABOOB | هبوب — Saudi Mountain Tourism</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ============================================================
+         NAVIGATION BAR
+         Fixed at the top — contains logo and page links
+         ============================================================ -->
+    <header>
+        <nav class="navbar">
+
+            <!-- Logo -->
+            <a href="index.html" class="navbar-brand">
+                <img src="images/logo.jpg" alt="Haboob Logo" />
+                <span>HABOOB</span>
+            </a>
+
+            <!-- Nav links (desktop) -->
+            <ul class="navbar-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="compare.html">Compare</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="booking.html" class="btn-nav">Book Now</a></li>
+            </ul>
+
+            <!-- Mobile menu button -->
+            <button class="navbar-toggle" id="navToggle" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <!-- Mobile dropdown menu -->
+        <div class="navbar-mobile" id="navMobile">
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="compare.html">Compare</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="booking.html" class="btn-primary">Book Now</a>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         MAIN CONTENT
+         ============================================================ -->
+    <main>
+
+        <!-- HERO SECTION — full-screen background image with title -->
+        <section class="hero">
+            <!-- Background image -->
+            <div class="hero-bg"></div>
+            <!-- Dark overlay for text readability -->
+            <div class="hero-overlay"></div>
+
+            <!-- Hero text content -->
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    HABOOB <span>| هبوب</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Explore the cool heights of Saudi Arabia.
+                    Pure mountain air and stunning vistas await.
+                </p>
+                <a href="destinations.html" class="btn-primary">Explore Destinations</a>
+            </div>
+        </section>
+
+        <!-- CLIMATE REALMS SECTION -->
+        <section class="realms-section">
+            <div class="container">
+
+                <!-- Section header -->
+                <div class="section-header">
+                    <p class="section-tag">Our Climate Realms</p>
+                    <h2 class="section-title">Choose Your Perfect Experience</h2>
+                    <p class="section-desc">
+                        Discover environments you never expected to find in Saudi Arabia —
+                        from misty valleys to snow-capped peaks.
+                    </p>
+                </div>
+
+                <!-- Cards grid -->
+                <div class="realms-grid">
+
+                    <!-- Card 1: Rainy Realms -->
+                    <article class="realm-card">
+                        <div class="realm-card-header rainy">🌧</div>
+                        <div class="realm-card-body">
+                            <span class="realm-badge">Rainy Realms</span>
+                            <h3 class="realm-card-title">Rainy Places</h3>
+                            <p class="realm-card-desc">
+                                Abha & Al-Ahsa — mysterious green valleys and hidden
+                                waterfalls under afternoon mist.
+                            </p>
+                            <a href="destinations.html" class="realm-card-link">
+                                View Destinations →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2: Snowy Peaks -->
+                    <article class="realm-card">
+                        <div class="realm-card-header snowy">❄️</div>
+                        <div class="realm-card-body">
+                            <span class="realm-badge">Snowy Peaks</span>
+                            <h3 class="realm-card-title">Snowy Places</h3>
+                            <p class="realm-card-desc">
+                                Tabuk (Jabal Al-Lawz) & Turaif — rare snow-capped mountains
+                                carrying legends of legendary winters.
+                            </p>
+                            <a href="destinations.html" class="realm-card-link">
+                                View Destinations →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3: Fresh Breezes -->
+                    <article class="realm-card">
+                        <div class="realm-card-header breezy">🌿</div>
+                        <div class="realm-card-body">
+                            <span class="realm-badge">Fresh Breezes</span>
+                            <h3 class="realm-card-title">Cool Breeze Places</h3>
+                            <p class="realm-card-desc">
+                                Al-Baha & Taif — pristine mountain forests and
+                                cool air preserved in its natural state.
+                            </p>
+                            <a href="destinations.html" class="realm-card-link">
+                                View Destinations →
+                            </a>
+                        </div>
+                    </article>
+
+                </div><!-- /realms-grid -->
+            </div>
+        </section>
+
+        <!-- WHY HABOOB SECTION -->
+        <section class="why-section">
+            <div class="container">
+                <div class="why-grid">
+
+                    <!-- Features list -->
+                    <div>
+                        <p class="section-tag">Why Choose Us</p>
+                        <h2 class="section-title">Why Choose Haboob?</h2>
+                        <p style="color:var(--color-gray); margin-bottom:10px; line-height:1.7;">
+                            We believe travel should connect you with nature without sacrificing
+                            comfort. Our curated experiences take you beyond the usual tourist routes.
+                        </p>
+
+                        <div class="why-features">
+                            <div class="why-feature">
+                                <div class="why-icon">🌱</div>
+                                <div>
+                                    <h4>Eco-Friendly Approach</h4>
+                                    <p>Sustainable tourism practices that respect and preserve natural environments.</p>
+                                </div>
+                            </div>
+                            <div class="why-feature">
+                                <div class="why-icon">🗺</div>
+                                <div>
+                                    <h4>Expert Local Guides</h4>
+                                    <p>Discover hidden trails with guides who were born and raised in these mountains.</p>
+                                </div>
+                            </div>
+                            <div class="why-feature">
+                                <div class="why-icon">⭐</div>
+                                <div>
+                                    <h4>Luxury Experiences</h4>
+                                    <p>Glamping, private transfers, and authentic Saudi dining amid breathtaking scenery.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call-to-action box -->
+                    <div class="why-cta-box">
+                        <h3>Ready for an Adventure?</h3>
+                        <p>Book your next mountain getaway today and breathe pure air.</p>
+                        <a href="booking.html" class="btn-primary">Book Now</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Brand column -->
+                <div class="footer-brand">
+                    <img src="images/logo.jpg" alt="Haboob Logo" />
+                    <p class="footer-brand-name">HABOOB | هبوب</p>
+                    <p>
+                        Discover the highlands of Saudi Arabia through
+                        our curated eco-friendly mountain experiences.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social" aria-label="Instagram">📷</a>
+                        <a href="#" class="footer-social" aria-label="Twitter">🐦</a>
+                        <a href="#" class="footer-social" aria-label="Facebook">👍</a>
+                        <a href="#" class="footer-social" aria-label="YouTube">▶</a>
+                    </div>
+                </div>
+
+                <!-- Quick links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="compare.html">Compare Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Realms column -->
+                <div class="footer-col">
+                    <h4>Our Realms</h4>
+                    <ul>
+                        <li><a href="destinations.html">🌧 Rainy Realms</a></li>
+                        <li><a href="destinations.html">❄️ Snowy Peaks</a></li>
+                        <li><a href="destinations.html">🌿 Fresh Breezes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact column -->
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">📍</span>
+                        <span>Al-Baha, Saudi Arabia</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">📞</span>
+                        <span>+966 50 123 4567</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span class="footer-contact-icon">✉</span>
+                        <span>info@haboobtravel.sa</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>© 2026 Haboob Travel. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript file linked at the bottom -->
+    <script src="script.js"></script>
+</body>
+
+</html>
